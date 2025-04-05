@@ -1,7 +1,14 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .dark-container {
@@ -13,7 +20,7 @@ body {
 }
 
 .padded {
-    padding: 10px 150px;
+    padding: 10px 5%;
 }
 
 .header {
@@ -29,11 +36,13 @@ body {
 .header p {
     color: #f9faf8;
     font-size: 24px;
+    margin: 10px 0;
 }
 
 ul {
     display: flex;
     gap: 48px;
+    padding-left: 0;
 }
 
 .header li {
@@ -49,7 +58,7 @@ a {
     display: flex;
     color: white;
     gap: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 .left-content {
@@ -65,9 +74,11 @@ a {
     border-radius: 10px;
     border-width: 2px;
     border-color: #1f2937;
-    width: 120px;
+    min-width: 120px;
+    width: auto;
     padding: 6px 12px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .hero-main-text {
@@ -89,10 +100,11 @@ a {
     align-items: center;
     padding: 20px;
     background-color: grey;
+    min-height: 200px;
 }
 
 .bright-container {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 .bright-container .section-header {
@@ -106,32 +118,36 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .student {
     width: 125px;
     flex: 0 1 auto;
+    text-align: center;
 }
 
 .student img {
-    height: 150px;
-    width: 125px;
+    height: auto;
+    width: 100%;
+    max-width: 125px;
     border-radius: 10%;
 }
 
 .padded-l {
-    padding: 15px 150px;
+    padding: 15px 5%;
 }
 
 .padded-xl {
-    padding: 15px 200px;
+    padding: 15px 5%;
 }
 
 .quote-container {
     display: flex;
     flex-direction: column;
     background-color: #e5e7eb;
-    padding: 10px 250px;;
+    padding: 10px 8%;
 }
 
 .quote {
@@ -153,7 +169,8 @@ a {
 .cta-container {
     background-color: #f9faf8;
     color:#f9faf8;
-    padding-top: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .cta-container-box {
@@ -161,9 +178,9 @@ a {
     background-color: #3882f6;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 150px;
+    margin: 10px 5%;
     border-radius: 10px;
-    padding: 10px 50px;
+    padding: 30px 5%;
     gap: 20px;
 }
 
@@ -182,4 +199,84 @@ a {
 
 .cta-right .sign-up {
     border-color:#f9faf7;
+}
+
+/* Tablet devices */
+@media only screen and (max-width: 900px) {
+    .hero-main-text {
+        font-size: 36px;
+    }
+    
+    .quote {
+        font-size: 30px;
+    }
+}
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .middle-section {
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    
+    .students {
+        justify-content: center;
+    }
+    
+    .student {
+        width: 45%;
+        max-width: 150px;
+    }
+    
+    .quote {
+        font-size: 24px;
+        padding: 15px;
+    }
+    
+    .cta-container-box {
+        flex-direction: column;
+        padding: 20px 5%;
+        text-align: center;
+    }
+    
+    .cta-left, .cta-right {
+        text-align: center;
+    }
+    
+    ul {
+        gap: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media only screen and (max-width: 480px) {
+    .hero-main-text {
+        font-size: 28px;
+    }
+    
+    .student {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .quote {
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .author {
+        font-size: 14px;
+    }
 }
